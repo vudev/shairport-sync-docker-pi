@@ -1,0 +1,22 @@
+{
+    "name": "shairport",
+    "version": "0.1.0",
+    "slug": "mopidy",
+    "description": "shairport",
+    "url": "https://github.com/vudev/shairport-sync-docker-pi",
+    "startup": "application",
+    "boot": "auto",
+    "image": "bestlibre/{arch}-mopidy",
+    "audio": true,
+    "options": {
+	        "options": []},
+    "schema": {
+	"options": [{"name": "str", "value": "str"}]
+    },
+    "devices": ["/dev/snd:/dev/snd:rwm"],
+    "ports": {"6680/tcp": 6000, "6000/tcp": 6000},
+    "map": ["share"],
+    "webui": "http://[HOST]:[PORT:6000]",
+    "host_ipc": true,
+    "arch": ["armv7", "armhf", "amd64", "aarch64", "i386"]
+}
